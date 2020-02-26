@@ -46,7 +46,7 @@
     state: started
   when:
     - sshd_manage_service|bool
-    - ansible_virtualization_type|default(None) != 'docker'
+#    - ansible_virtualization_type|default(None) != 'docker'
     - ansible_connection != 'chroot'
 
 # Due to ansible bug 21026, cannot use service module on RHEL 7
